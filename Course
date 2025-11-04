@@ -1,0 +1,49 @@
+public class Course
+{
+    private string name, description, autor;
+    private int price;
+    public string Name { get { return name; } }
+    public string Description { get { return description; } }
+    public string Autor { get { return autor; } }
+    public int Price { get { return price; } }
+}
+public class Videccourse : Course
+{
+    private int count;
+    private double duration;
+    public int Count { get { return count; } }
+    public double Duration { get { return duration; } }
+    public void Vidio(int Count, double Duration)
+    {
+        Console.WriteLine($"В курсе всего {Count} видео продолжительностью {Duration} ");
+    }
+}
+public class TextCourso : Course
+{
+    private int chapter, text;
+    public int Chapter { get { return chapter; } }
+    public int Text { get { return text; } }
+    public void Fail(int Chapter, int Text)
+    {
+        Console.WriteLine($"В текстовом курсе {Chapter} глав общим объемом текста в {Text} мб");
+    }
+}
+public class TnteractiveCourse : Course
+{
+    private int exs, check_system;
+    public int Exs { get { return exs; } }
+    public int CheckSystem { get { return check_system; } }
+    public void Check(int Exs, int CheckSystem)
+    {
+        if (CheckSystem <= 0 || CheckSystem > 10)
+        {
+            Console.WriteLine("Вы не справелись с упражнениями");
+            return;
+        }
+        else
+        {
+            Console.WriteLine($"Вы справелись с {Exs} из 10.");
+        }
+
+    }
+}
