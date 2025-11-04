@@ -1,0 +1,52 @@
+public class LibraryIter
+{
+    private string nameBook, autor, status;
+    private int year;
+
+    public string NameBook { get { return nameBook; } }
+    public string Autor { get { return autor; } }
+    public int Year { get { return year; } set { year = value; } }
+    public string Status { get { return status; } set { status = value; } }
+}
+public class Book : LibraryIter
+{
+    private int pages, isbn;
+    public int Pages { get { return pages; } }
+    public int ISBN { get { return isbn; } }
+    public void Read(int Pages, int ISBN)
+    {
+        Console.WriteLine($"Книга с МСКН {ISBN} имеет {Pages} страниц");
+    }
+}
+public class Magazen : LibraryIter
+{
+    private int relis;
+    private string timeWork;
+    public int Relis { get { return relis; } }
+    public string TimeWork { get { return timeWork; } }
+    public void Gazeta(int Relis, string TimeWork)
+    {
+        Console.WriteLine($"Газета с номером выпуска {Relis} выпускаеться {TimeWork}");
+    }
+}
+public class DVD : LibraryIter
+{
+    private double duration, rating;
+    public double Duration { get { return duration; } set { duration = value; } }
+    public double Rating { get { return rating; } set { rating = value; } }
+    public void See(double Duration, double Rating)
+    {
+        Console.WriteLine($"Фильм продолжительностью: {Duration} имеет рейтинг: {Rating} ");
+    }
+}
+public class AudioBook : LibraryIter
+{
+    private double time;
+    private string dictor;
+    public double Time { get { return time; } set { time = value; } }
+    public string Dictor { get { return dictor; } set { dictor = value; } }
+    public void Lisen(double Time, string Dictor)
+    {
+        Console.WriteLine($"Эта аудиокнига имеет продолжительность {Time}, а озвучивала ее {Dictor}");
+    }
+}
