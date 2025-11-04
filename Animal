@@ -1,0 +1,53 @@
+public class Animal
+{
+     private string view, habitat, eat;
+     private int age;
+     public string View { get { return view; } set { view = value; } }
+     public string Habitat { get { return habitat; } set { habitat = value; } }
+     public string Eat { get { return eat; } set { eat = value; } }
+     public int Age { get { return age; } set { age = value; } }
+}
+ public class Mamma1 : Animal
+ {
+     private string fur;
+     private int pregnancy;
+     public string Fur { get { return fur; } set { fur = value; } }
+     public int Pregnancy {  get { return pregnancy; } set { pregnancy = value; } }
+     public void Cat(string Fur, int Pregnancy)
+     {
+         Console.WriteLine($"У кошки тип меха {Fur}, а беременность длиться {Pregnancy}");
+     }
+ }
+ public class Bird : Animal
+ {
+     private double wingspan;
+     private string nesting_type;
+     public double Wingspan { get { return wingspan; } set { wingspan = value; } }
+     public string Nesting_type { get { return nesting_type; } set { nesting_type = value; } }
+     public void Parrot(string Nesting_type, double Wingspan)
+     {
+         Console.WriteLine($"Попугаи имеют тип гнездования {Nesting_type}, а их крылья достигают размаха до {Wingspan}");
+     }
+ }
+ public class Reptile: Animal
+ {
+     private string skin;
+    private double temperatyra; 
+     public string Skin { get { return skin; } set { skin = value; } }
+     public double Temperatyra { get { return temperatyra; } set { temperatyra = value; } }
+     public void Crocodilia(string Skin, double Temperatyra)
+     {
+         Console.WriteLine($"Гикрны имеют {Skin} кожу и их привычная температура обитания +{Temperatyra} градуса");
+     }
+ }
+ public class Fish : Animal
+ {
+     private string scales;
+     private double habitat_depth;
+     public string Sales { get { return scales; } set { scales = value; } }
+     public double HabitatDepth { get { return habitat_depth; } set { habitat_depth = value; } }
+     public void Cloun(string Sales, double HabitatDepth)
+     {
+         Console.WriteLine($"Рыбы клоуны обладают {Sales} типом чешуи и их привычная глубина обетания {HabitatDepth} метров под водой");
+     }
+ }
