@@ -1,0 +1,38 @@
+public class Employee
+{
+    private string name, position;
+    private int salary;
+    private DateTime date;
+
+    public string Name { get { return name; } }
+    public string Position { get { return position; } }
+    public int Salary { get { return salary; } }
+    public DateTime Date { get { return date; } set { date = value; } }
+}
+public class Maneger : Employee
+{
+    private int Team_size { get; set; }
+
+    public void Meeting(int Team_size)
+    {
+        Console.WriteLine($"Менеджер проводит собрание с {Team_size} сотрудниками");
+    }
+}
+public class Developer : Employee
+{
+    private string Language { get; set; }
+   
+    public void Write_code(string Language)
+    {
+        Console.WriteLine($"Программисты данной компании пишут на {Language} языке программирования");
+    }
+}
+public class Director : Employee
+{
+    private string Department { get; set; }
+   
+    public void Budget(string Department)
+    {
+        Console.WriteLine($"Директор утвердил бюджет отделю {Department}");
+    }
+}
